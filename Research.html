@@ -157,8 +157,30 @@ autosamplers. We use the Ultimate 3000 from Thermo. To perform the sample preper
 <p style="text-align:left"; ><a href="https://pubs.acs.org/doi/10.1021/acs.jproteome.0c00675">Isobaric Carrier</a></p>
 <p style="text-align:left"; ><a href="https://www.biorxiv.org/content/10.1101/2021.11.03.467007v2">plexDIA</a></p>
 
-<p style="text-align:left"; > dfsdf </p>
+<p style="text-align:left"; > TMT base workflows allows the user to prepare over 2000 single cells in one day (144 sets).
+For label free and mTRAQ based workflows, we provide template that allow the user to prepare a similar number of
+single cells per day. However, a small limitation for these workflows is the sample pickup speed. As we have currently
+designed it, this workflow allows for the user to pickup ~ 384 samples in about 6-7 hours. The sample pickup process
+is very robust and hands off but certainly time consuming. If this throughput is insufficient, we have ideas about how
+to further increase pickup speeds. This involves increasing the speed of the robot arm's motion, decreasing lenght of
+pooling step, and parallelizing the pickup with both nozzles. Theoretically you should be able to pickup ~1500 LF
+samples in ~6 hours. If you make any progress towards this end, let me know!
+ </p>
 
+<p style="text-align:left"; > There are also several other areas where we think the process can be further optimized.
+While the flourocarbon surface has worked well for peptide recovery, its possible to think of other surfaces that might
+also work well such as micropatterned glass. Etching patterns in borosilicate glass can give hydrophobic properties that
+allow nice droplet formation and further reduce contact area. While we have rigorously benchmarked the efficay of
+cell lysis in 100% DMSO, certain hard to lyse cells or challenging proteins may benefit from adding additional reagents such as protease max
+that could theoretically improve protein extraction further.
+</p>
+
+<p style="text-align:left"; > Thats about everything you should know to get started with nPOP! Please checkout
+  the paper if you have not already, and move on to the protocol.io if you'd like to try it out.
+
+  Always feel free to reach out with any questions, challenges, or ideas for improving things further!
+
+  leduc.an@northeastern.edu </p>
 
 
 <p>&ensp;&ensp;&ensp;&ensp;</p>
