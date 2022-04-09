@@ -5,7 +5,7 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Georgia';
 
 }
 
@@ -98,15 +98,17 @@ body {
 
 ul.a {
   list-style-type:circle;
-  margin-left: 100pt;
+  margin-inline: 100px 100px;
   font-size: 16px;
 
 }
 p {
   margin: 0;
-  margin-inline: 40px 40px;
-  margin-top: 1em;
-  font:
+  margin-inline: 60px 60px;
+  margin-top: 2em;
+  margin-bottom: 0em;
+
+  font-family:'Georgia'
 }
 </style>
 
@@ -120,7 +122,8 @@ p {
 
 <p style="text-align:left;">nPOP is a droplet based method that for single cell proteomic sample preperation.
   We see nPOP as a conceptual framework moreso than a specific workflow. In this post I will talk about why we
-  designed nPOP, how we
+  designed nPOP, how we recommend its use, how to addapt nPOP for different workflows,
+  and adress aspects that have not been fully optomized and hopefully may be further explored by others.
   nPOP was developed with several goals in mind.  </p>
 
 <ul class="a">
@@ -138,18 +141,27 @@ p {
 <p style="text-align:left;"> To achieve these goals, we took a unique approach to sample preperation,
 abandoning familiar staples of mass spectrometry sample preperation such as tube and wells. In our approach,
 single cells are prepared in nanoliter droplets on the surface of an unpatterned glass slide with a flourocarbon
-coating. In these droplets, we lyse cells, digest proteins to peptides, label cells for mutiplexing, and pool
+coating. In these droplets, we lyse cells, digest proteins to peptides, label peptides for mutiplexing, and pool
 samples into a set. The samples are dispensed into a 384 well plate where they can be picked up by most standard
-autosamplers. We use the Ultimate 3000 from Thermo.
+autosamplers. We use the Ultimate 3000 from Thermo. To perform the sample preperation, we use the CellenONE liquid handling and cell dispensing
+  platform made by Scienion. The system uses acoustic technology to reliably dispens cells and various reagents in droplets of ~300
+  picoliters. </p>
+
+<p style="text-align:left;"> We have designed the following workflows for mutiplexing with TMT, mTRAQ, and label free.
+  We are strong advocates of using multiplxed workflows over labe free methods. The reasons for this are two fold; 1)
+  mutiplexing samples provides the opportunity to significantly increase throughput which is essential for many single
+  cell applications and 2) labeled methods allow for transfering identifications for peptides that are plenty abundant
+  for reliable quantitation, but insufficiently abundant for confident identification. You can read more about both
+  DDA and DIA based approches for these strategies in the links below:   </p>
+
+<p style="text-align:left"; ><a href="https://pubs.acs.org/doi/10.1021/acs.jproteome.0c00675">Isobaric Carrier</a></p>
+<p style="text-align:left"; ><a href="https://www.biorxiv.org/content/10.1101/2021.11.03.467007v2">plexDIA</a></p>
+
+<p style="text-align:left"; > dfsdf </p>
 
 
- </p>
 
-<p style="text-align:left;">To perform the sample preperation, we use the CellenONE liquid handling and cell dispensing
-  platform made by Scienion.
-   </p>
-
-
+<p>&ensp;&ensp;&ensp;&ensp;</p>
 
 <script>
 function myFunction() {
