@@ -120,57 +120,57 @@ p {
 
 <p style="text-align:center;"><img src="for_proto.jpg" width="800" height="300" alt="The Scream">
 
-<p style="text-align:left;">nPOP is a droplet based method that for single cell proteomic sample preperation.
-  We see nPOP as a conceptual framework moreso than a specific workflow. In this post I will talk about why we
-  designed nPOP, how we recommend its use, how to addapt nPOP for different workflows,
-  and adress aspects that have not been fully optomized and hopefully may be further explored by others.
+<p style="text-align:left;">nPOP is a droplet based method for single cell proteomic sample preparation.
+  We see nPOP as a conceptual framework more so than a specific workflow. In this post I will talk about why we
+  designed nPOP, how we recommend its use, how to adapt nPOP for different workflows,
+  and address aspects that have not been fully optimized and hopefully may be further explored by others.
   nPOP was developed with several goals in mind.  </p>
 
 <ul class="a">
-  <li>1) Miniaturize sample preperation volumes to several nanoliters. This has an number of benefits.
-    It enables cleaner samples by reducing the amout of reagents needed to prepare a single cell. It also
-    enables higher sample preperation throughput by allowing users to prepare a larger number of samples with less
-    reagents. Lastly, it can reduce sample preperation losses by exposing samples to less surface area.  </li>
-  <li>2) Fully automate the sample preperation. This can remove batch effects related to user error,
+  <li>1) Miniaturize sample preparation volumes to several nanoliters. This has a number of benefits.
+    It enables cleaner samples by reducing the amount of reagents needed to prepare a single cell. It also
+    enables higher sample preparation throughput by allowing users to prepare a larger number of samples with less
+    reagents. Lastly, it can reduce sample preparation losses by exposing samples to less surface area.  </li>
+  <li>2) Fully automate the sample preparation. This can remove batch effects related to user error,
       increasing data consistency while also allowing for increased throughput by removing manual pipetting steps.</li>
   <li>3) Create a flexible workflow that allow users to maximize the number of samples simultaneously prepared and
-      can accomidate many different experimental designs. </li>
+      can accommodate many different experimental designs.</li>
 
 </ul>
 
-<p style="text-align:left;"> To achieve these goals, we took a unique approach to sample preperation,
-abandoning familiar staples of mass spectrometry sample preperation such as tube and wells. In our approach,
-single cells are prepared in nanoliter droplets on the surface of an unpatterned glass slide with a flourocarbon
-coating. In these droplets, we lyse cells, digest proteins to peptides, label peptides for mutiplexing, and pool
+<p style="text-align:left;"> To achieve these goals, we took a unique approach to sample preparation,
+abandoning familiar staples of mass spectrometry sample preparation such as tube and wells. In our approach,
+single cells are prepared in nanoliter droplets on the surface of an unpatterned glass slide with a fluorocarbon
+coating. In these droplets, we lyse cells, digest proteins to peptides, label peptides for multiplexing, and pool
 samples into a set. The samples are dispensed into a 384 well plate where they can be picked up by most standard
-autosamplers. We use the Ultimate 3000 from Thermo. To perform the sample preperation, we use the CellenONE liquid handling and cell dispensing
-  platform made by Scienion. The system uses acoustic technology to reliably dispens cells and various reagents in droplets of ~300
-  picoliters. </p>
+autosamplers. We use the Ultimate 3000 from Thermo. To perform the sample preparation, we use the CellenONE liquid handling and cell dispensing
+platform made by Scienion. The system uses acoustic technology to reliably dispens cells and various reagents in droplets of ~300
+picoliters. </p>
 
-<p style="text-align:left;"> We have designed the following workflows for mutiplexing with TMT, mTRAQ, and label free.
-  We are strong advocates of using multiplxed workflows over labe free methods. The reasons for this are two fold; 1)
-  mutiplexing samples provides the opportunity to significantly increase throughput which is essential for many single
+<p style="text-align:left;"> We have designed the following workflows for multiplexing with TMT, mTRAQ, and label free.
+  We are strong advocates of using multiplexed workflows over label free methods. The reasons for this are twofold; 1)
+  multiplexing samples provides the opportunity to significantly increase throughput which is essential for many single
   cell applications and 2) labeled methods allow for transfering identifications for peptides that are plenty abundant
   for reliable quantitation, but insufficiently abundant for confident identification. You can read more about both
-  DDA and DIA based approches for these strategies in the links below:   </p>
+  DDA and DIA based approaches for these strategies in the links below: </p>
 
 <p style="text-align:left"; ><a href="https://pubs.acs.org/doi/10.1021/acs.jproteome.0c00675">Isobaric Carrier</a></p>
 <p style="text-align:left"; ><a href="https://www.biorxiv.org/content/10.1101/2021.11.03.467007v2">plexDIA</a></p>
 
-<p style="text-align:left"; > TMT base workflows allows the user to prepare over 2000 single cells in one day (144 sets).
+<p style="text-align:left"; > TMT base workflows allow the user to prepare over 2000 single cells in one day (144 sets).
 For label free and mTRAQ based workflows, we provide template that allow the user to prepare a similar number of
 single cells per day. However, a small limitation for these workflows is the sample pickup speed. As we have currently
 designed it, this workflow allows for the user to pickup ~ 384 samples in about 6-7 hours. The sample pickup process
 is very robust and hands off but certainly time consuming. If this throughput is insufficient, we have ideas about how
-to further increase pickup speeds. This involves increasing the speed of the robot arm's motion, decreasing lenght of
+to further increase pickup speeds. This involves increasing the speed of the robot arm's motion, decreasing length of
 pooling step, and parallelizing the pickup with both nozzles. Theoretically you should be able to pickup ~1500 LF
 samples in ~6 hours. If you make any progress towards this end, let me know!
  </p>
 
 <p style="text-align:left"; > There are also several other areas where we think the process can be further optimized.
-While the flourocarbon surface has worked well for peptide recovery, its possible to think of other surfaces that might
+While the fluorocarbon surface has worked well for peptide recovery, it's possible to think of other surfaces that might
 also work well such as micropatterned glass. Etching patterns in borosilicate glass can give hydrophobic properties that
-allow nice droplet formation and further reduce contact area. While we have rigorously benchmarked the efficay of
+allow nice droplet formation and further reduce contact area. While we have rigorously benchmarked the efficacy of
 cell lysis in 100% DMSO, certain hard to lyse cells or challenging proteins may benefit from adding additional reagents such as protease max
 that could theoretically improve protein extraction further.
 </p>
