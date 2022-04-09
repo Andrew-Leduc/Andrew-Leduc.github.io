@@ -133,7 +133,7 @@ p {
     reagents. Lastly, it can reduce sample preparation losses by exposing samples to less surface area.  </li>
   <li>2) Fully automate the sample preparation. This can remove batch effects related to user error,
       increasing data consistency while also allowing for increased throughput by removing manual pipetting steps.</li>
-  <li>3) Create a flexible workflow that allow users to maximize the number of samples simultaneously prepared and
+  <li>3) Create a flexible workflow that allows users to maximize the number of samples simultaneously prepared and
       can accommodate many different experimental designs.</li>
 
 </ul>
@@ -141,7 +141,9 @@ p {
 <p style="text-align:left;"> To achieve these goals, we took a unique approach to sample preparation,
 abandoning familiar staples of mass spectrometry sample preparation such as tube and wells. In our approach,
 single cells are prepared in nanoliter droplets on the surface of an unpatterned glass slide with a fluorocarbon
-coating. In these droplets, we lyse cells, digest proteins to peptides, label peptides for multiplexing, and pool
+coating. The is approach allows the user to create any droplet geometry desired, so the sample preparation can meet
+the needs of different workflows and adapt to the changing landscape of multiplexing reagents.
+In these droplets, we lyse cells, digest proteins to peptides, label peptides for multiplexing, and pool
 samples into a set. The samples are dispensed into a 384 well plate where they can be picked up by most standard
 autosamplers. We use the Ultimate 3000 from Thermo. To perform the sample preparation, we use the CellenONE liquid handling and cell dispensing
 platform made by Scienion. The system uses acoustic technology to reliably dispens cells and various reagents in droplets of ~300
@@ -158,13 +160,15 @@ picoliters. </p>
 <p style="text-align:left"; ><a href="https://www.biorxiv.org/content/10.1101/2021.11.03.467007v2">plexDIA</a></p>
 
 <p style="text-align:left"; > TMT base workflows allow the user to prepare over 2000 single cells in one day (144 sets).
-For label free and mTRAQ based workflows, we provide template that allow the user to prepare a similar number of
-single cells per day. However, a small limitation for these workflows is the sample pickup speed. As we have currently
-designed it, this workflow allows for the user to pickup ~ 384 samples in about 6-7 hours. The sample pickup process
-is very robust and hands off but certainly time consuming. If this throughput is insufficient, we have ideas about how
-to further increase pickup speeds. This involves increasing the speed of the robot arm's motion, decreasing length of
-pooling step, and parallelizing the pickup with both nozzles. Theoretically you should be able to pickup ~1500 LF
-samples in ~6 hours. If you make any progress towards this end, let me know!
+For label free and mTRAQ based workflows, we provide templates that allow the user to prepare a similar number of single cells per day.
+However, a small limitation for these workflows is the sample pickup speed. As we have currently designed it,
+this workflow allows for the user to pickup ~ 384 samples in about 6-7 hours.
+The sample pickup process is very robust and hands off but certainly time consuming.
+If this throughput is insufficient, we have ideas about how to further increase pickup speeds.
+This involves increasing the speed of the robot arm's motion, decreasing the length of pooling steps, and
+parallelizing the pickup with both nozzles. Theoretically you should be able to pick up ~1500 LF samples in ~6 hours.
+If you make any progress towards this end, let me know!
+
  </p>
 
 <p style="text-align:left"; > There are also several other areas where we think the process can be further optimized.
@@ -175,7 +179,7 @@ cell lysis in 100% DMSO, certain hard to lyse cells or challenging proteins may 
 that could theoretically improve protein extraction further.
 </p>
 
-<p style="text-align:left"; > Thats about everything you should know to get started with nPOP! Please checkout
+<p style="text-align:left"; > That's about everything you should know to get started with nPOP! Please checkout
   the paper if you have not already, and move on to the protocol.io if you'd like to try it out.
 
   Always feel free to reach out with any questions, challenges, or ideas for improving things further!
