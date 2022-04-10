@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  margin: 0;
+  font-family:'Georgia';
+
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+}
+.topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #000000;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <a href="Research.html">Research</a>
+  <a href="Talks.html">Talks</a>
+  <a class="active" href="SkypeaScientist.html">Science Outreach</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
+
+<style>
+
+.center2 {
+  text-align: center;
+  font-size: 18px;
+}
+.center {
+  text-align: center;
+  font-size: 22px;
+}
+.marg {
+  margin-left: 200pt;
+  font-size: 18px;
+}
+
+ul.a {
+  list-style-type:circle;
+  margin-inline: 100px 100px;
+  font-size: 16px;
+
+}
+p {
+  margin: 0;
+  margin-inline: 60px 60px;
+  margin-top: 2em;
+  margin-bottom: 0em;
+
+  font-family:'Georgia'
+}
+</style>
+
+
+<h1 style="text-align:center;font-family:;"> -- </h1>
+<h1 style="text-align:center;">Research</h1>
+<h2 style="text-align:Center;"><a href="https://www.biorxiv.org/content/10.1101/2021.04.24.441211v3">Nano proteomic sample preperation for single cell proteomics</a></h2>
+<p style="text-align:center";><a href="https://web.northeastern.edu/slavov/2014_HIquant/">Protocol</a></p>
+
+<p style="text-align:center;"><img src="for_proto.jpg" width="80%" height="40%" alt="The Scream">
+
+<p style="text-align:left;">nPOP is a droplet based method for single cell proteomic sample preparation.
+  We see nPOP as a conceptual framework more so than a specific workflow. In this post I will talk about why we
+  designed nPOP, how we recommend its use, how to adapt nPOP for different workflows,
+  and address aspects that have not been fully optimized and hopefully may be further explored by others.
+  nPOP was developed with several goals in mind.  </p>
+
+<ul class="a">
+  <li>1) Miniaturize sample preparation volumes to several nanoliters. This has a number of benefits.
+    It enables cleaner samples by reducing the amount of reagents needed to prepare a single cell. It also
+    enables higher sample preparation throughput by allowing users to prepare a larger number of samples with less
+    reagents. Lastly, it can reduce sample preparation losses by exposing samples to less surface area.  </li>
+  <li>2) Fully automate the sample preparation. This can remove batch effects related to user error,
+      increasing data consistency while also allowing for increased throughput by removing manual pipetting steps.</li>
+  <li>3) Create a flexible workflow that allows users to maximize the number of samples simultaneously prepared and
+      can accommodate many different experimental designs.</li>
+
+</ul>
+
+<p style="text-align:left;"> To achieve these goals, we took a unique approach to sample preparation,
+abandoning familiar staples of mass spectrometry sample preparation such as tube and wells. In our approach,
+single cells are prepared in nanoliter droplets on the surface of an unpatterned glass slide with a fluorocarbon
+coating. The is approach allows the user to create any droplet geometry desired, so the sample preparation can meet
+the needs of different workflows and adapt to the changing landscape of multiplexing reagents.
+In these droplets, we lyse cells, digest proteins to peptides, label peptides for multiplexing, and pool
+samples into a set. The samples are dispensed into a 384 well plate where they can be picked up by most standard
+autosamplers. We use the Ultimate 3000 from Thermo. To perform the sample preparation, we use the CellenONE liquid handling and cell dispensing
+platform made by Scienion. The system uses acoustic technology to reliably dispens cells and various reagents in droplets of ~300
+picoliters. </p>
+
+<p style="text-align:left;"> We have designed workflows for multiplexing with TMT, mTRAQ, and label free.
+  We are strong advocates of using multiplexed workflows over label free methods. The reasons for this are twofold; 1)
+  multiplexing samples provides the opportunity to significantly increase throughput which is essential for many single
+  cell applications and 2) labeled methods allow for transfering identifications for peptides that are plenty abundant
+  for reliable quantitation, but insufficiently abundant for confident identification. You can read more about both
+  DDA and DIA based approaches for these strategies in the links below: </p>
+
+<p style="text-align:left"; ><a href="https://pubs.acs.org/doi/10.1021/acs.jproteome.0c00675">Isobaric Carrier</a></p>
+<p style="text-align:left"; ><a href="https://www.biorxiv.org/content/10.1101/2021.11.03.467007v2">plexDIA</a></p>
+
+<p style="text-align:left"; > TMT base workflows allow the user to prepare over 2000 single cells in one day (144 sets).
+For label free and mTRAQ based workflows, we provide templates that allow the user to prepare a similar number of single cells per day.
+However, a small limitation for these workflows is the sample pickup speed. As we have currently designed it,
+this workflow allows for the user to pickup ~ 384 samples in about 6-7 hours.
+The sample pickup process is very robust and hands off but certainly time consuming.
+If this throughput is insufficient, we have ideas about how to further increase pickup speeds.
+This involves increasing the speed of the robot arm's motion, decreasing the length of pooling steps, and
+parallelizing the pickup with both nozzles. Theoretically you should be able to pick up ~1500 LF samples in ~6 hours.
+If you make any progress towards this end, let me know!
+
+ </p>
+
+<p style="text-align:left"; > There are also several other areas where we think the process can be further optimized.
+While the fluorocarbon surface has worked well for peptide recovery, it's possible to think of other surfaces that might
+also work well such as micropatterned glass. Etching patterns in borosilicate glass can give hydrophobic properties that
+allow nice droplet formation and further reduce contact area. While we have rigorously benchmarked the efficacy of
+cell lysis in 100% DMSO, certain hard to lyse cells or challenging proteins may benefit from adding additional reagents such as protease max
+that could theoretically improve protein extraction further.
+</p>
+
+<p style="text-align:left"; > That's about everything you should know to get started with nPOP! Please checkout
+  the paper if you have not already, and move on to the protocol.io if you'd like to try it out.
+
+  Always feel free to reach out with any questions, challenges, or ideas for improving things further!
+
+  leduc.an@northeastern.edu </p>
+
+
+<p>&ensp;&ensp;&ensp;&ensp;</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+</body>
+</html>
