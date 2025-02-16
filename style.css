@@ -133,3 +133,9 @@
     list-style-position: inside;
   }
 
+  .blog-content {
+    max-width: 800px;     /* or any width you prefer */
+    margin: 0 auto;       /* centers the section horizontally */
+    padding: 0 1em;       /* optional padding for extra spacing */
+  }
+
